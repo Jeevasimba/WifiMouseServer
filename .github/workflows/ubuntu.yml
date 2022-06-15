@@ -47,4 +47,6 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
          name: my-artifact
-         path: /home/runner/work/WifiMouseServer/WifiMouseServer      
+         path: /home/runner/work/WifiMouseServer/WifiMouseServer     
+      - name: run
+        run: ./WifiMouseServer           
