@@ -17,7 +17,7 @@ jobs:
     strategy:
       matrix:
         os: [macos-11.0]
-        qt_ver: [5.9.9,5.12.10,5.15.2,6.2.2]
+        qt_ver: [5.9.9]
         qt_arch: [clang_64]
     env:
       targetName: WifiMouseServer
@@ -45,7 +45,7 @@ jobs:
       - name: package
         run: |
           # 拷贝依赖
-          macdeployqt bin/release/${targetName}.app -qmldir=. -verbose=1 -dmg
+          macdeployqt release/${targetName}.app -qmldir=. -verbose=1 -dmg
       # 上传artifacts          
       - uses: actions/upload-artifact@v2
         with:
